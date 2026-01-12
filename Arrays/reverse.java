@@ -1,12 +1,24 @@
+import java.util.Scanner;
+
 class reverse
 {
     public static void main(String[]args)
     {
-        String name = "Shivam";
+      Scanner sc=new Scanner(System.in);
 
-        StringBuffer sb = new StringBuffer(name);
-        sb.reverse();
-        System.out.println(sb);
+        System.out.println("Enter the number");
+        int x=sc.nextInt();
+        int no=x;
+        int rem;
+        int rev=0;
+        
+        while(no!=0)
     
+        {
+           rem=no%10;
+           rev=rev*10+rem; 
+           no=no/10;
+        }
+        System.out.println("The reverse number is:"+rev);
     }
 }
